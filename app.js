@@ -31,4 +31,5 @@ var processPort = process.env.PORT ? process.env.PORT : 3000;
 	
 server.listen(processPort, function() {
 	console.log('Ntalk no ar');
+	console.log(processPort);
 });
