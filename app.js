@@ -27,6 +27,8 @@ load('models')
 load('sockets')
 	.into(io);
 	
-server.listen(3000, function() {
+var processPort = process.env.PORT ? process.env.PORT : 3000;
+	
+server.listen(processPort, function() {
 	console.log('Ntalk no ar');
 });
