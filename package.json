@@ -1,0 +1,15 @@
+{
+	"name": "node-book",
+	"description": "Exercices from book 'Aplicações em real time com Node - Casa do Código'",
+	"author": "José Antonio <jtony.net@gmail.com>",
+	"version": "0.0.1",
+	"private": true,
+
+
+	"dependencies": {
+		"express": "3.4.7",
+		"express-load": "1.1.8",
+		"ejs": "0.8.5",
+		"socket.io": "0.9.16"
+	}
+}

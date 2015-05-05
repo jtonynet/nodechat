@@ -1,0 +1,38 @@
+<% include ../header %>
+	<header>
+		<h2>NTalk - Agenda de contatos</h2>
+	</header>
+	<section>
+		<p>Bem-vindo <%- user.name %></p>
+	</section>
+
+	<section>
+		<form action ="/contatos" method="post">
+			<input type="text" name="contact[name]" placeholder="Nome">
+			<input type="text" name="contact[email]" placeholder="E-mail">
+			<button type="submit">Cadastrar</button>
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>E-mail</th>
+					<th>Ação</th>
+				</tr>
+			<thead>
+			<tbody>
+				<% contacts.forEach(function(contact, index) { %>
+				<tr>
+					<td><%- contact.name %></td>
+					<td><%- contact.email %></td>
+					<td>
+						<a href="/contatos/<%- index %>">Detalhes</a> - 
+						<a href="/chat/<%- contact.email %>">Conversar</a>
+					</td>
+				</tr>
+				<% }) %>
+			</tbody>
+		</table>
+	</section>	
+<% include ../exit %>
+<% include ../footer %>
