@@ -4,6 +4,7 @@ var express      = require('express'),
     error        = require('./middleware/error'),
     server       = require('http').createServer(app),
     io           = require('socket.io').listen(server);
+    //teste
 
 
 app.engine('ejs', require('ejs').renderFile);
